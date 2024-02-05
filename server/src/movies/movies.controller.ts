@@ -34,6 +34,7 @@ export class MoviesController {
 
   @Post()
   create(@Body() movieData: CreateMovieDto) {
+    console.log(movieData);
     return this.moviesService.createMovie(movieData);
   }
 

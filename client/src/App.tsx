@@ -1,9 +1,11 @@
-import { styled } from "styled-components";
-import { Get } from "./components/Get";
+import { styled } from 'styled-components';
+import { Get } from './components/Get';
+import { Post } from './components/Post';
 
 function App() {
   return (
     <Main>
+      <Post />
       <Get />
     </Main>
   );
