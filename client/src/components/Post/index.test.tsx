@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 import { renderAppWithRouterMatch } from '../../mocks/renderWidthQuery';
 import App from '../../App';
 
@@ -17,5 +16,6 @@ test('영화를 추가하면 추가한 내용까지 리렌더링된다.', async 
   await user.click(submitBtn);
 
   const newMovieTitle = await screen.findByText('Good Day');
+  screen.debug();
   expect(newMovieTitle).toBeInTheDocument();
 });
